@@ -110,8 +110,8 @@ int  clientFunction(char buff[MAXLINE], int readfd, int writefd){
 
 			if(strcmp(result,"false")==0){
 				printf("\nClient: [Server can't complete your request.]\n\n");
-			}else if(strcmp(result,"true")==0){
-				printf("\nClient: [Server complete your request.]\n\n");
+			}else{
+				printf("\nClient: [%s's name is %s]\n\n", studentID, result);
 			}
 		}else if(strcmp(code,"w")==0 || strcmp(code,"W")==0){
 			strcpy(buff,CODE_FILEWRITE);
